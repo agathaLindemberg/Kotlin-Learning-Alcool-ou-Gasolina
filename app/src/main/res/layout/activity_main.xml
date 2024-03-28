@@ -62,14 +62,14 @@
             android:id="@+id/edGasolina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="@string/_0"
-            android:inputType="numberDecimal"
+            android:autofillHints=""
             android:background="@drawable/edittext_background"
             android:backgroundTint="@color/material_on_surface_stroke"
-            android:autofillHints="" />
+            android:ems="10"
+            android:hint="@string/_0"
+            android:inputType="numberDecimal" />
 
 
         <TextView
@@ -85,21 +85,21 @@
             android:id="@+id/edAlcool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="30dp"
-            android:ems="10"
-            android:hint="@string/_0"
-            android:inputType="numberDecimal"
+            android:autofillHints=""
             android:background="@drawable/edittext_background"
             android:backgroundTint="@color/material_on_surface_stroke"
-            android:autofillHints="" />
+            android:ems="10"
+            android:hint="@string/_0"
+            android:inputType="numberDecimal" />
 
         <Switch
             android:id="@+id/swPercentual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="20dp"
             android:text="@string/percentual_70"
             tools:ignore="RtlHardcoded,UseSwitchCompatOrMaterialXml" />
 
@@ -108,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="20dp"
+            android:layout_marginVertical="40dp"
             android:backgroundTint="?attr/colorSecondary"
             android:text="@string/calcular" />
 
