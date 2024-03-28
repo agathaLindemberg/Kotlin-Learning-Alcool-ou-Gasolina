@@ -24,8 +24,10 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             android:contentDescription="@string/uma_bomba_de_gasolina_ilustrando_o_app"
             android:paddingVertical="10dp"
             android:textAlignment="center"
@@ -108,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="40dp"
+            android:layout_marginVertical="20dp"
             android:backgroundTint="?attr/colorSecondary"
             android:text="@string/calcular" />
 
