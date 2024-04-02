@@ -38,16 +38,21 @@ class MainActivity : AppCompatActivity() {
         // Recuperar os valores salvos
         val precoAlcool = sharedPreferences.getFloat("precoAlcool", 0.0f)
         val precoGasolina = sharedPreferences.getFloat("precoGasolina", 0.0f)
-        val isChecked = sharedPreferences.getBoolean("isChecked", false)
+        val isChecked = sharedPreferences.getBoolean("isChecked", switch.isChecked)
+        val textMensagem = sharedPreferences.getString("textMensagem", textMsg.text.toString())
         var swPercentual = if (isChecked) 75 else 70
 
         etPrecoAlcool.setText(precoAlcool.toString())
         etPrecoGasolina.setText(precoGasolina.toString())
+        textMsg.text = textMensagem
+        switch.isChecked = isChecked
 
         switch.setOnCheckedChangeListener { _, isChecked ->
             swPercentual = if (isChecked) 75 else 70
             updatePercentualText(swPercentual)
         }
+
+        updatePercentualText(swPercentual)
 
         btCalc.setOnClickListener {
             val precoAlcoolText = etPrecoAlcool.text.toString()
@@ -73,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                     putFloat("precoGasolina", precoGasolina)
                     putInt("swPercentual", swPercentual)
                     putBoolean("isChecked", switch.isChecked)
+                    putString("textMensagem", textMsg.text.toString())
                     apply()
                 }
             } else {
